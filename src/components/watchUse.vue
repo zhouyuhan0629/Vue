@@ -1,7 +1,7 @@
 <template>
   <div>
-    <input type="text" v-model.trim="question" />
-    {{question}}
+    <input type="text"  v-model.trim="question.name"/>
+    {{question.name}}
   </div>
 </template>
 
@@ -11,7 +11,10 @@ export default {
   name: "watchUse",
   data() {
     return {
-      question: "请提问",
+      question: {
+          name:"请提问",
+          please:1
+      }
     };
   },
   watch:{
@@ -19,7 +22,8 @@ export default {
           handler(newVal,oldVal){
                 console.log(1); //这样的话不用等到她改变，页面一出来就有1
           },
-         immediate:true // 写在对象里面 handler平级
+         immediate:true, // 写在对象里面 handler平级
+         deep:true
       }
   }
 };

@@ -5,6 +5,8 @@
     啊为什么要用自定义事件啊{{num}}
     <swiper title-app="c" :author="12"></swiper>
     <watchUse></watchUse>
+    <eventBus></eventBus>
+    <eventBus2></eventBus2>
   </div>
 </template>
 
@@ -12,12 +14,17 @@
 import HelloWorld from './components/HelloWorld'
 import calc from './components/calc.vue'
 import WatchUse from './components/watchUse.vue'
+import eventBus from './components/eventBus.vue'
+import eventBus2 from './components/eventBus2.vue'
 export default {
   name: 'App',
   components: {
     HelloWorld,
     calc,
-    WatchUse
+    WatchUse,
+    eventBus,
+    eventBus2
+    
   },
   data(){
     return {
